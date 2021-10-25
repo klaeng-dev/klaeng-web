@@ -8,14 +8,34 @@
       ></b-navbar-toggle>
       <b-collapse class="selection-bar" id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#"
-            ><span class="route active">Home</span></b-nav-item
+          <b-nav-item to="/"
+            ><span
+              class="route"
+              :class="currentRoutePath == '/' ? 'active' : ''"
+              >Home</span
+            ></b-nav-item
           >
-          <b-nav-item href="#"><span class="route">Services</span></b-nav-item>
-          <b-nav-item href="#"
-            ><span class="route">About Klaeng</span></b-nav-item
+          <b-nav-item to="/services"
+            ><span
+              class="route"
+              :class="currentRoutePath == '/services' ? 'active' : ''"
+              >Services</span
+            ></b-nav-item
           >
-          <b-nav-item href="#"><span class="route">Contact</span></b-nav-item>
+          <b-nav-item to="/about"
+            ><span
+              class="route"
+              :class="currentRoutePath == '/about' ? 'active' : ''"
+              >About KLAENG</span
+            ></b-nav-item
+          >
+          <b-nav-item to="/contact"
+            ><span
+              class="route"
+              :class="currentRoutePath == '/contact' ? 'active' : ''"
+              >Contact</span
+            ></b-nav-item
+          >
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -23,12 +43,33 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      currentRoutePath: '',
+    };
+  },
+  methods: {
+    updateCurrentPath() {
+      this.currentRoutePath = this.$router.currentRoute.path
+    }
+  },
+  watch:{
+    $route() {
+        this.updateCurrentPath()
+    }
+  }, 
+  created() {
+    console.log(this.$router.currentRoute.path)
+    this.updateCurrentPath()
+  },
+  
+};
 </script>
 
 <style>
 .route {
-  color: black;
+  color: #000000;
   font-size: 1rem;
   display: flex;
   justify-content: right;
@@ -41,6 +82,7 @@ export default {};
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: top;
 }
 .b-navbar-toggler {
   right: 15px;
@@ -52,5 +94,8 @@ img {
 }
 .selection-bar {
   margin: 10px 0px 0px 0px;
+}
+.router-link-exact-active {
+  color: #655798;
 }
 </style>

@@ -1,19 +1,18 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <Nav />
+    <router-view/>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+
 import Nav from './components/Nav.vue'
 
 export default {
   name: 'App',
   components: {
     Nav
-    // HelloWorld
   }
 }
 </script>
