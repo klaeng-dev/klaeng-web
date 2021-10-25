@@ -46,24 +46,23 @@
 export default {
   data() {
     return {
-      currentRoutePath: '',
+      currentRoutePath: "",
     };
   },
   methods: {
     updateCurrentPath() {
-      this.currentRoutePath = this.$router.currentRoute.path
-    }
+      this.currentRoutePath = this.$router.currentRoute.path;
+    },
   },
-  watch:{
+  watch: {
     $route() {
-        this.updateCurrentPath()
-    }
-  }, 
-  created() {
-    console.log(this.$router.currentRoute.path)
-    this.updateCurrentPath()
+      this.updateCurrentPath();
+    },
   },
-  
+  created() {
+    console.log(this.$router.currentRoute.path);
+    this.updateCurrentPath();
+  },
 };
 </script>
 
