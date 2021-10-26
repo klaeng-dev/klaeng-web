@@ -66,7 +66,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .route {
   color: #000000;
   font-size: 1rem;
