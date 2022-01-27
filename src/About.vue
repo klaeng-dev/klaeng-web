@@ -1,58 +1,66 @@
 <template>
   <div class="container">
     <h1 class="text top-bar"><b>About us</b></h1>
-    <span class="text"
+    <span class="text description"
       ><h3>
         <b>Klaeng Marketing Solutions</b> is a digital marketing firm in
         Cambodia that specializes in digital marketing.
       </h3></span
     >
-    <h4 class="text title"><b>Vision</b></h4>
-    <span class="text"
-      ><h6>
+    <h1 class="text title"><b>Vision</b></h1>
+    <span class="text description"
+      ><h3>
         To be a leading digital marketing firm in Cambodia that focuses on
         social media management and marketing campaigns.
-      </h6></span
+      </h3></span
     >
-    <h4 class="text title"><b>Missions</b></h4>
-    <ul>
-      <li>To provide the best quality service that suits customers’ needs</li>
+    <h1 class="text title"><b>Missions</b></h1>
+    <ul class="description">
       <li>
-        To consult with customers in building their brand images and brand
-        awareness
+        <h3>To provide the best quality service that suits customers’ needs</h3>
       </li>
       <li>
-        To provide the most creative and innovative ideas for clients’ marketing
-        plan
+        <h3>
+          To consult with customers in building their brand images and brand
+          awareness
+        </h3>
+      </li>
+      <li>
+        <h3>
+          To provide the most creative and innovative ideas for clients’
+          marketing plan
+        </h3>
       </li>
     </ul>
-    <h4 class="text title"><b>Values</b></h4>
-    <ul id="last-list">
+    <h1 class="text title"><b>Values</b></h1>
+    <ul id="last-list" class="description">
       <li>
-        <span>Quality</span> - we aims to deliver the best quality services
+        <h3><b>Quality</b> - we aims to deliver the best quality services</h3>
       </li>
       <li>
-        <span>Customer’s satisfaction</span> - is our priority
+        <h3><b>Customer’s satisfaction</b> - is our priority</h3>
       </li>
       <li>
-        <span> Brands’ image</span> - we deliver and consult with our clients to
-        deliver the image they want
+        <h3>
+          <b> Brands’ image</b> - we deliver and consult with our clients to
+          deliver the image they want
+        </h3>
       </li>
       <li>
-        <span> Brands’ awareness</span> - focuses on highest reaches and
-        awareness in the largest market
+        <h3>
+          <b> Brands’ awareness</b> - focuses on highest reaches and awareness
+          in the largest market
+        </h3>
       </li>
       <li>
-        <span>Sales Generation</span>
-        - we help our clients generate more sales
+        <h3>
+          <b>Sales Generation</b>
+          - we help our clients generate more sales
+        </h3>
       </li>
     </ul>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style scoped>
 .container {
@@ -63,13 +71,13 @@ export default {};
   color: #000000;
 }
 .top-bar {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 .title {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 .description {
-    margin-top: 20px
+  margin-top: 20px;
 }
 ul {
   margin: auto;
@@ -83,6 +91,6 @@ li > span {
   font-weight: bold;
 }
 #last-list {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 </style>
